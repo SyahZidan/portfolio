@@ -18,13 +18,17 @@ export const Skills: React.FC = () => {
 
   return (
     <section className="skills section skills-logo-section" id="skills" aria-label="Skills and tools">
-      <h2 className="skills-logo-title">Tools</h2>
+      <div className="skills-logo-heading">
+        <p className="skills-logo-kicker">AI, Web & Daily Stack</p>
+        <h2 className="skills-logo-title">Tools I Explore With</h2>
+        <p className="skills-logo-subtitle">A mix of AI assistants, web basics, and creative software I use to build and learn.</p>
+      </div>
       <LogoLoop
         logos={skillLogos}
         speed={86}
         direction="left"
-        logoHeight={74}
-        gap={82}
+        logoHeight={68}
+        gap={76}
         hoverSpeed={0}
         scaleOnHover
         fadeOut

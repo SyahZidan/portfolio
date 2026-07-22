@@ -1817,31 +1817,55 @@ body[data-theme="light"] .timeline-proof-button {
 
 .skills-logo-section {
     min-height: auto;
-    padding-block: clamp(4.5rem, 8vw, 7.5rem);
+    padding-block: clamp(2.5rem, 5vw, 4.25rem);
     overflow: hidden;
 }
 
-.skills-logo-title {
-    margin: 0 0 clamp(2rem, 4vw, 3.2rem);
+.skills-logo-heading {
+    display: grid;
+    justify-items: center;
+    gap: 0.55rem;
+    margin: 0 0 clamp(1.4rem, 2.8vw, 2.4rem);
     text-align: center;
-    font-size: clamp(2.8rem, 6vw, 5.6rem);
-    line-height: 0.9;
+}
+
+.skills-logo-kicker {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.skills-logo-title {
+    margin: 0;
+    font-size: clamp(2.15rem, 4.5vw, 4.4rem);
+    line-height: 0.92;
     letter-spacing: 0;
     color: var(--text);
 }
 
+.skills-logo-subtitle {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+    line-height: 1.6;
+}
+
 .skills-logo-loop {
-    padding: 1.15rem 0;
+    padding: 0.8rem 0;
 }
 
 .skills-logo-loop .logoloop__item img {
-    filter: brightness(0) invert(1);
-    opacity: 0.82;
+    filter: grayscale(1) brightness(1.2) contrast(1.05);
+    opacity: 0.86;
 }
 
 body[data-theme="light"] .skills-logo-loop .logoloop__item img {
-    filter: brightness(0);
-    opacity: 0.72;
+    filter: grayscale(1) brightness(0.55) contrast(1.2);
+    opacity: 0.78;
 }
 
 .education-layout .section-title-block {
