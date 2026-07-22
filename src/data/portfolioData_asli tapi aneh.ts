@@ -61,38 +61,38 @@ export const portfolioContent: { en: StaticCopy; id: StaticCopy } = {
       sectionLabel: "07 / Identity",
       kicker: "Main Logo Breakdown",
       title: "About My Main Logo",
-      lead: "This logo is made up of a circle, a vertical line through the middle, and the letters A and D from AstralDevX. It's kept simple, but still easy to recognize.",
+      lead: "This logo is built from a simple orbit, a clear vertical axis, and the A and D initials from AstralDevX. The form stays minimal but still feels distinct and easy to remember.",
       focusKicker: "Design Notes",
-      focusTitle: "Simple shape, clear form.",
-      focusLead: "I kept it simple so it stays clean and easy to use anywhere.",
-      focusMetricOne: "Still clear at small sizes",
-      focusMetricTwo: "Works for both digital and print",
+      focusTitle: "Minimal in form, clear in shape.",
+      focusLead: "I kept the structure simple so the logo stays clean, memorable, and easy to apply.",
+      focusMetricOne: "Clear at smaller sizes",
+      focusMetricTwo: "Made for digital and physical applications",
       fullLabel: "Full mark",
       symbolLabel: "Symbol only",
       anatomyKicker: "Symbol Anatomy",
-      anatomyTitle: "One mark, four parts.",
+      anatomyTitle: "One mark, four key readings.",
       usageKicker: "Applied Identity",
-      usageTitle: "Simple enough to use anywhere.",
-      usageLead: "The logo still reads clearly on apparel, print, and screens since the shape is simple to begin with.",
+      usageTitle: "Simple enough to work across different uses.",
+      usageLead: "The logo stays readable on apparel, print, and digital media because the structure is clean and easy to adapt.",
       principles: [
         {
-          title: "Outer Circle",
-          text: "The ring around it is just there to frame the mark and hold it together.",
+          title: "Orbit Core",
+          text: "The outer ring reflects continuity and forward movement.",
           image: "assets/identity/logo-bulat.webp"
         },
         {
-          title: "Vertical Line",
-          text: "The line through the middle keeps the top and bottom balanced.",
+          title: "Vertical Axis",
+          text: "The top-and-bottom structure gives the mark balance and a clear visual spine.",
           image: "assets/identity/logo-atasbawah.webp"
         },
         {
-          title: "Letter A",
-          text: "Stands for Astral, placed at the center of the mark.",
+          title: "Initial A",
+          text: "The A stands for Astral and forms the central point of lift in the mark.",
           image: "assets/identity/logo-a.webp"
         },
         {
-          title: "Letter D",
-          text: "Stands for DevX, tied to the build and execution side of the name.",
+          title: "Initial D",
+          text: "The D stands for DevX and links the identity back to making and execution.",
           image: "assets/identity/logo-d.webp"
         }
       ]
@@ -219,38 +219,38 @@ export const portfolioContent: { en: StaticCopy; id: StaticCopy } = {
       sectionLabel: "07 / Identitas",
       kicker: "Bedah Logo Utama",
       title: "Tentang Logo Utama Saya",
-      lead: "Logo ini terdiri dari lingkaran, garis vertikal di tengah, dan huruf A serta D dari AstralDevX. Bentuknya sengaja dibuat sederhana, tapi tetap gampang dikenali.",
+      lead: "Logo ini dibangun dari orbit yang sederhana, sumbu vertikal yang tegas, serta inisial A dan D dari AstralDevX. Bentuknya tetap minimal, tetapi tetap punya siluet yang kuat dan mudah diingat.",
       focusKicker: "Catatan Desain",
-      focusTitle: "Bentuknya simpel, tapi jelas.",
-      focusLead: "Saya buat sesederhana mungkin supaya logonya gampang dipakai di mana saja.",
-      focusMetricOne: "Masih jelas di ukuran kecil",
-      focusMetricTwo: "Bisa dipakai untuk digital maupun cetak",
+      focusTitle: "Minimal secara bentuk, jelas secara siluet.",
+      focusLead: "Strukturnya saya jaga tetap sederhana agar logonya bersih, mudah diingat, dan fleksibel dipakai.",
+      focusMetricOne: "Tetap jelas pada ukuran kecil",
+      focusMetricTwo: "Dirancang untuk digital dan aplikasi fisik",
       fullLabel: "Logo penuh",
       symbolLabel: "Simbol saja",
       anatomyKicker: "Anatomi Simbol",
-      anatomyTitle: "Satu logo, empat bagian.",
+      anatomyTitle: "Satu mark, empat pembacaan utama.",
       usageKicker: "Identitas Terapan",
-      usageTitle: "Sederhana, jadi bisa dipakai di mana saja.",
-      usageLead: "Logonya tetap terbaca di baju, media cetak, maupun layar karena bentuknya memang sudah simpel dari awal.",
+      usageTitle: "Sederhana, tapi tetap kuat di berbagai media.",
+      usageLead: "Logonya tetap terbaca di apparel, media cetak, maupun digital karena strukturnya bersih dan mudah diadaptasi.",
       principles: [
         {
-          title: "Lingkaran Luar",
-          text: "Lingkaran di luar cuma berfungsi membingkai dan menyatukan bentuknya.",
+          title: "Orbit Inti",
+          text: "Lingkaran luar merepresentasikan kesinambungan dan gerak maju.",
           image: "assets/identity/logo-bulat.webp"
         },
         {
-          title: "Garis Vertikal",
-          text: "Garis di tengah menjaga bagian atas dan bawah tetap seimbang.",
+          title: "Sumbu Vertikal",
+          text: "Susunan atas dan bawah memberi keseimbangan serta poros visual yang tegas.",
           image: "assets/identity/logo-atasbawah.webp"
         },
         {
-          title: "Huruf A",
-          text: "Merujuk ke Astral, ditaruh di bagian tengah logo.",
+          title: "Inisial A",
+          text: "Huruf A merujuk pada Astral dan menjadi titik angkat di pusat mark.",
           image: "assets/identity/logo-a.webp"
         },
         {
-          title: "Huruf D",
-          text: "Merujuk ke DevX, sisi eksekusi dan pengembangan dari nama ini.",
+          title: "Inisial D",
+          text: "Huruf D merujuk pada DevX dan menghubungkan identitas ini dengan proses pengembangan.",
           image: "assets/identity/logo-d.webp"
         }
       ]
@@ -397,20 +397,20 @@ export const featuredProjects: Project[] = [
       id: "Konsep Commerce"
     },
     summary: {
-      en: "A marketplace concept with a bolder visual style, made so browsing products feels a bit more distinctive.",
-      id: "Konsep marketplace dengan gaya visual yang lebih berani, biar pengalaman lihat-lihat produk terasa beda dari yang biasa."
+      en: "A marketplace concept with a stronger visual atmosphere, designed to make product browsing feel more premium and memorable.",
+      id: "Konsep marketplace dengan atmosfer visual yang lebih kuat, dirancang agar pengalaman melihat produk terasa lebih premium dan mudah diingat."
     },
     description: {
-      en: "An e-commerce interface that keeps products easy to browse while still having its own visual style.",
-      id: "Antarmuka e-commerce yang tetap mudah dipakai untuk melihat produk, tapi punya gaya visual sendiri."
+      en: "An e-commerce interface that balances product clarity with a more distinctive visual identity and a polished browsing flow.",
+      id: "Antarmuka e-commerce yang menjaga kejelasan produk, sekaligus menghadirkan identitas visual yang lebih kuat dan alur jelajah yang lebih halus."
     },
     role: {
       en: "Creative coding, visual system, responsive build",
       id: "Creative coding, sistem visual, dan build responsif"
     },
     impact: {
-      en: "A test of how far a shopping interface can look different without getting harder to use.",
-      id: "Percobaan seberapa jauh tampilan toko online bisa dibuat beda tanpa bikin ribet dipakai."
+      en: "Explores how a commerce experience can feel expressive without compromising usability.",
+      id: "Menunjukkan bahwa pengalaman belanja online tetap bisa terasa ekspresif tanpa mengorbankan kenyamanan penggunaan."
     },
     stack: ["UI Design", "Frontend", "Animation"],
     meta: {
@@ -546,8 +546,8 @@ export const featuredProjects: Project[] = [
       id: "Penata suara, pemain, dan pendukung ide adegan"
     },
     impact: {
-      en: "Won 1st place nationally in this anti-corruption campaign video competition, one of my favorite projects from school.",
-      id: "Menang Juara 1 tingkat nasional di lomba video kampanye antikorupsi ini, salah satu project sekolah yang paling saya suka."
+      en: "Won 1st place at the national anti-corruption education campaign video competition and became one of my most meaningful school-era projects.",
+      id: "Meraih Juara 1 tingkat nasional dalam lomba video kampanye pendidikan antikorupsi dan menjadi salah satu karya sekolah yang paling berkesan bagi saya."
     },
     stack: ["Video", "Sound", "Storytelling"],
     meta: {
@@ -604,20 +604,20 @@ export const featuredProjects: Project[] = [
       id: "Redesign Web"
     },
     summary: {
-      en: "A redesign of the NPC Global website, focused on better structure, look, and user flow.",
-      id: "Proyek redesign website NPC Global, fokus ke struktur informasi, tampilan, dan alur pengguna yang lebih enak dipakai."
+      en: "A redesign project of the NPC Global website focusing on structure, visual appeal, and optimized user flows.",
+      id: "Proyek redesign website NPC Global yang berfokus pada struktur informasi, estetika visual, dan optimalisasi alur pengguna."
     },
     description: {
-      en: "This redesign gives NPC Global a cleaner look, easier navigation, and a style that fits their industry better.",
-      id: "Redesign ini bikin tampilan NPC Global lebih bersih, navigasinya lebih gampang, dan gayanya lebih pas sama industri mereka."
+      en: "This redesign reimagines the online presence of NPC Global with a cleaner style, clearer navigation, and a modern design language that fits their industry.",
+      id: "Redesign ini merancang ulang kehadiran online NPC Global dengan gaya yang bersih, navigasi yang lebih jelas, serta bahasa desain modern yang sesuai dengan industrinya."
     },
     role: {
       en: "UI/UX design, layout system, and responsive frontend implementation",
       id: "Desain UI/UX, sistem layout, dan implementasi frontend responsif"
     },
     impact: {
-      en: "Made NPC's business services look more credible and easier to browse on any screen size.",
-      id: "Bikin layanan bisnis NPC terlihat lebih meyakinkan dan lebih enak dilihat di berbagai ukuran layar."
+      en: "Created a more professional presentation of NPC's business services, enhancing user trust and layout responsiveness.",
+      id: "Menghasilkan presentasi layanan bisnis NPC yang lebih profesional, meningkatkan kepercayaan pengguna dan responsivitas layout."
     },
     stack: ["UI Design", "Frontend", "CSS"],
     meta: {
@@ -642,16 +642,16 @@ export const featuredProjects: Project[] = [
       id: "Rancang ulang antarmuka untuk Persatuan Olahraga Dayung Seluruh Indonesia, menyajikan berita, acara, dan profil atlet dalam format yang lebih bersih."
     },
     description: {
-      en: "Focused on giving PODSI a fresher look, with clearer event schedules and a layout that fits its sports theme.",
-      id: "Fokus bikin tampilan PODSI lebih segar, jadwal acara yang lebih jelas, dan layout yang sesuai tema olahraga."
+      en: "Focused on upgrading the look of PODSI with dynamic elements, clear scheduling for events, and a solid sporting aesthetic.",
+      id: "Berfokus untuk meningkatkan tampilan PODSI dengan elemen dinamis, jadwal acara yang jelas, dan estetika olahraga yang solid."
     },
     role: {
       en: "UI design direction and modern layout prototype",
       id: "Arah desain UI dan prototipe layout modern"
     },
     impact: {
-      en: "Makes it easier for fans and athletes to find rowing event info and updates.",
-      id: "Bikin penggemar dan atlet lebih gampang cari info acara dayung dan update terbaru."
+      en: "Makes information regarding national rowing events and updates much more accessible for sports enthusiasts and athletes.",
+      id: "Membuat informasi seputar acara dayung nasional dan pembaruan lebih mudah diakses oleh penggemar olahraga dan atlet."
     },
     stack: ["UI Design", "Frontend", "CSS Grid"],
     meta: {
