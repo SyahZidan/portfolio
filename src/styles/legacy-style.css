@@ -1815,17 +1815,17 @@ body[data-theme="light"] .timeline-proof-button {
     max-width: 22rem;
 }
 
-.skills-logo-section {
+.skills.section.skills-logo-section {
     min-height: auto;
-    padding-block: clamp(2.5rem, 5vw, 4.25rem);
+    padding: clamp(1.3rem, 2.8vw, 2.4rem) 1.8rem clamp(1.5rem, 3.2vw, 2.7rem);
     overflow: hidden;
 }
 
 .skills-logo-heading {
     display: grid;
     justify-items: center;
-    gap: 0.55rem;
-    margin: 0 0 clamp(1.4rem, 2.8vw, 2.4rem);
+    gap: 0.42rem;
+    margin: 0 0 clamp(0.95rem, 2vw, 1.55rem);
     text-align: center;
 }
 
@@ -1840,7 +1840,7 @@ body[data-theme="light"] .timeline-proof-button {
 
 .skills-logo-title {
     margin: 0;
-    font-size: clamp(2.15rem, 4.5vw, 4.4rem);
+    font-size: clamp(1.95rem, 4vw, 3.85rem);
     line-height: 0.92;
     letter-spacing: 0;
     color: var(--text);
@@ -1851,11 +1851,11 @@ body[data-theme="light"] .timeline-proof-button {
     margin: 0;
     color: var(--muted);
     font-size: clamp(0.95rem, 1.3vw, 1.08rem);
-    line-height: 1.6;
+    line-height: 1.45;
 }
 
 .skills-logo-loop {
-    padding: 0.8rem 0;
+    padding: 0.35rem 0;
 }
 
 .skills-logo-loop .logoloop__item img {
