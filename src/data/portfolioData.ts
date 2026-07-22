@@ -330,19 +330,24 @@ export const siteProfile: SiteProfile = {
   ],
   contact: [
     {
-      label: { en: "Email", id: "Email" },
-      value: "careerzidan@gmail.com",
-      href: "mailto:careerzidan@gmail.com"
+      label: { en: "GitHub", id: "GitHub" },
+      value: "@SyahZidan",
+      href: "https://github.com/SyahZidan"
     },
     {
-      label: { en: "Phone", id: "Telepon" },
-      value: "08559846604",
-      href: "tel:08559846604"
+      label: { en: "LinkedIn", id: "LinkedIn" },
+      value: "M. Syah Zidan",
+      href: "https://www.linkedin.com/in/muhammad-syah-zidan-fadhlurrahman-9b5a33384/"
     },
     {
       label: { en: "Instagram", id: "Instagram" },
       value: "@msyhzidan24",
-      href: "https://instagram.com/msyhzidan24"
+      href: "https://www.instagram.com/msyhzidan24/"
+    },
+    {
+      label: { en: "Email", id: "Email" },
+      value: "careerzidan@gmail.com",
+      href: "mailto:careerzidan@gmail.com"
     }
   ]
 };
