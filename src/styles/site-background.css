@@ -1,0 +1,134 @@
+.site-bg {
+  position: fixed;
+  inset: -12vmin;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.site-bg__mesh {
+  position: absolute;
+  inset: 0;
+  background-color: #060606;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 10% -5%, rgba(212, 255, 63, 0.1), transparent 62%),
+    radial-gradient(ellipse 90% 70% at 95% 5%, rgba(212, 255, 63, 0.06), transparent 58%),
+    radial-gradient(ellipse 100% 90% at 50% 110%, rgba(212, 255, 63, 0.05), transparent 65%),
+    radial-gradient(ellipse 80% 60% at 30% 55%, rgba(212, 255, 63, 0.03), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 75% 70%, rgba(255, 255, 255, 0.015), transparent 68%);
+}
+
+.site-bg[data-theme="light"] .site-bg__mesh {
+  background-color: #f2efe7;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 10% -5%, rgba(143, 177, 0, 0.12), transparent 62%),
+    radial-gradient(ellipse 90% 70% at 95% 5%, rgba(143, 177, 0, 0.07), transparent 58%),
+    radial-gradient(ellipse 100% 90% at 50% 110%, rgba(143, 177, 0, 0.06), transparent 65%),
+    radial-gradient(ellipse 80% 60% at 30% 55%, rgba(143, 177, 0, 0.04), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 75% 70%, rgba(0, 0, 0, 0.02), transparent 68%);
+}
+
+.site-bg__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(212, 255, 63, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 255, 63, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+}
+
+.site-bg[data-theme="light"] .site-bg__grid {
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+}
+
+.site-bg__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.site-bg__orb--primary {
+  top: -12%;
+  right: -6%;
+  width: 48vmin;
+  height: 48vmin;
+  max-width: 560px;
+  max-height: 560px;
+  background: rgba(212, 255, 63, 0.09);
+  animation: site-bg-float 22s ease-in-out infinite;
+}
+
+.site-bg__orb--secondary {
+  bottom: 5%;
+  left: -8%;
+  width: 40vmin;
+  height: 40vmin;
+  max-width: 480px;
+  max-height: 480px;
+  background: rgba(212, 255, 63, 0.05);
+  animation: site-bg-float 28s ease-in-out infinite reverse;
+}
+
+.site-bg__orb--accent {
+  top: 38%;
+  left: 52%;
+  width: 32vmin;
+  height: 32vmin;
+  max-width: 380px;
+  max-height: 380px;
+  background: rgba(255, 255, 255, 0.025);
+  animation: site-bg-float 32s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+.site-bg[data-theme="light"] .site-bg__orb--primary {
+  background: rgba(143, 177, 0, 0.1);
+}
+
+.site-bg[data-theme="light"] .site-bg__orb--secondary {
+  background: rgba(143, 177, 0, 0.06);
+}
+
+.site-bg[data-theme="light"] .site-bg__orb--accent {
+  background: rgba(0, 0, 0, 0.018);
+}
+
+.site-bg__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 130% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.28) 100%);
+  opacity: 0.65;
+}
+
+.site-bg[data-theme="light"] .site-bg__vignette {
+  background: radial-gradient(ellipse 130% 100% at 50% 50%, transparent 60%, rgba(17, 17, 17, 0.04) 100%);
+  opacity: 0.8;
+}
+
+@keyframes site-bg-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.03);
+  }
+}
+
+main,
+.site-header,
+footer,
+.modal-root {
+  position: relative;
+  z-index: 1;
+}

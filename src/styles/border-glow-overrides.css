@@ -1,0 +1,133 @@
+/* BorderGlow + existing card layout integration */
+
+.glow-card-shell {
+  height: 100%;
+}
+
+.border-glow-card .border-glow-inner {
+  height: 100%;
+}
+
+.border-glow-card.education-card .border-glow-inner,
+.border-glow-card.education-card-current .border-glow-inner,
+.border-glow-card.education-card-foundation .border-glow-inner {
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem;
+}
+
+.border-glow-card.education-card,
+.border-glow-card.education-card-current,
+.border-glow-card.education-card-foundation {
+  border: none;
+  box-shadow: var(--shadow);
+  min-height: 100%;
+}
+
+.border-glow-card.project-card {
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+.border-glow-card.project-card .border-glow-inner {
+  padding: 0;
+}
+
+.project-card-content {
+  padding: 1rem;
+}
+
+.border-glow-card.principle-card {
+  border: none;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.border-glow-card.principle-card .border-glow-inner {
+  padding: 1.4rem;
+  gap: 0;
+}
+
+.border-glow-card.principle-card span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.border-glow-card.principle-card h3 {
+  margin: 0.9rem 0 0.75rem;
+  font-size: 1.28rem;
+}
+
+.border-glow-card.principle-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.border-glow-card.skill-panel,
+.border-glow-card.skills-support {
+  border: none;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.skill-panel-inner {
+  display: grid;
+  gap: 0.95rem;
+  padding: 1.15rem;
+  height: 100%;
+  background:
+    radial-gradient(circle at top right, var(--skill-panel-accent, var(--accent)), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 42%);
+}
+
+.border-glow-card.skills-support .border-glow-inner {
+  padding: 1.2rem;
+  gap: 1rem;
+}
+
+.border-glow-card.timeline-copy-card {
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+.border-glow-card.timeline-copy-card .border-glow-inner {
+  padding: 0;
+}
+
+.border-glow-card.timeline-copy-card .timeline-copy {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+}
+
+.border-glow-card.credential-row {
+  display: block;
+  padding: 0;
+  border: none;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.border-glow-card.credential-row .border-glow-inner {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) 165px;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.35rem;
+}
+
+@media (max-width: 760px) {
+  .border-glow-card.credential-row .border-glow-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.credentials-list .glow-card-shell:last-child .border-glow-card.credential-row {
+  margin-bottom: 0;
+}
+
+body[data-theme="light"] .border-glow-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
