@@ -60,12 +60,21 @@ export const Particles: React.FC<ParticlesProps> = ({
     initCanvas();
   }, [refresh]);
 
+  const rectRef = useRef<{ left: number; top: number } | null>(null);
+
   const handleMouseMove = (e: MouseEvent) => {
     if (canvasRef.current) {
-      const rect = canvasRef.current.getBoundingClientRect();
-      const { clientX, clientY } = e;
-      const x = clientX - rect.left - canvasSizeRef.current.w / 2;
-      const y = clientY - rect.top - canvasSizeRef.current.h / 2;
+      if (!rectRef.current) {
+        const r = canvasRef.current.getBoundingClientRect();
+        rectRef.current = {
+          left: r.left + window.scrollX,
+          top: r.top + window.scrollY,
+        };
+      }
+      const rect = rectRef.current;
+      const { pageX, pageY } = e;
+      const x = pageX - rect.left - canvasSizeRef.current.w / 2;
+      const y = pageY - rect.top - canvasSizeRef.current.h / 2;
       mouseRef.current = { x, y };
     }
   };
@@ -78,6 +87,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   }, []);
 
   const initCanvas = () => {
+    rectRef.current = null;
     resizeCanvas();
     drawParticles();
   };

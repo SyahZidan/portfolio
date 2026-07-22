@@ -149,12 +149,27 @@ const BorderGlow = ({
     [getCenterOfElement]
   );
 
+  const rectRef = useRef<DOMRect | null>(null);
+
+  const handlePointerEnter = useCallback(() => {
+    if (cardRef.current) {
+      rectRef.current = cardRef.current.getBoundingClientRect();
+    }
+  }, []);
+
+  const handlePointerLeave = useCallback(() => {
+    rectRef.current = null;
+  }, []);
+
   const handlePointerMove = useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
       const card = cardRef.current;
       if (!card) return;
 
-      const rect = card.getBoundingClientRect();
+      if (!rectRef.current) {
+        rectRef.current = card.getBoundingClientRect();
+      }
+      const rect = rectRef.current;
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
@@ -210,6 +225,8 @@ const BorderGlow = ({
   return (
     <div
       ref={cardRef}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
       onPointerMove={handlePointerMove}
       className={`border-glow-card ${className}`}
       style={
