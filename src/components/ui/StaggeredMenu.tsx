@@ -89,8 +89,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       preLayerElsRef.current = preLayers;
 
       const offscreen = position === "left" ? -100 : 100;
-      gsap.set([panel, ...preLayers], { xPercent: offscreen, opacity: 1 });
-      if (preContainer) gsap.set(preContainer, { xPercent: 0, opacity: 1 });
+      gsap.set([panel, ...preLayers], { xPercent: offscreen, opacity: 1, visibility: "hidden" });
+      if (preContainer) gsap.set(preContainer, { xPercent: 0, opacity: 1, visibility: "hidden" });
       gsap.set(plusH, { transformOrigin: "50% 50%", rotate: 0 });
       gsap.set(plusV, { transformOrigin: "50% 50%", rotate: 90 });
       gsap.set(icon, { rotate: 0, transformOrigin: "50% 50%" });
@@ -103,12 +103,16 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   const buildOpenTimeline = useCallback(() => {
     const panel = panelRef.current;
     const layers = preLayerElsRef.current;
+    const preContainer = preLayersRef.current;
     if (!panel) return null;
 
     openTlRef.current?.kill();
     closeTweenRef.current?.kill();
     closeTweenRef.current = null;
     itemEntranceTweenRef.current?.kill();
+
+    gsap.set([panel, ...layers], { visibility: "visible" });
+    if (preContainer) gsap.set(preContainer, { visibility: "visible" });
 
     const itemEls = Array.from(panel.querySelectorAll(".sm-panel-itemLabel"));
     const numberEls = Array.from(panel.querySelectorAll(".sm-panel-list[data-numbering] .sm-panel-item"));
@@ -172,6 +176,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
     const panel = panelRef.current;
     const layers = preLayerElsRef.current;
+    const preContainer = preLayersRef.current;
     if (!panel) return;
 
     closeTweenRef.current?.kill();
@@ -187,6 +192,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         const socialTitle = panel.querySelector(".sm-socials-title");
         if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
         gsap.set(panel.querySelectorAll(".sm-socials-link"), { y: 25, opacity: 0 });
+        gsap.set([...layers, panel], { visibility: "hidden" });
+        if (preContainer) gsap.set(preContainer, { visibility: "hidden" });
         busyRef.current = false;
       },
     });

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from "react";
 import { portfolioContent } from "../data/portfolioData";
 
 type Language = "en" | "id";
@@ -47,15 +47,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     localStorage.setItem("portfolio-language", language);
   }, [language]);
 
-  const setLanguage = (lang: Language) => {
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
-  };
+  }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setThemeState((prev) => (prev === "dark" ? "light" : "dark"));
-  };
+  }, []);
 
-  const navigate = (page: Page) => {
+  const navigate = useCallback((page: Page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
     if (page === "projects") {
@@ -63,7 +63,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     } else {
       window.history.pushState({}, "", "/");
     }
-  };
+  }, []);
 
   // Handle browser back/forward
   useEffect(() => {
@@ -78,23 +78,28 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  const t = (path: string): string => {
+  const t = useCallback((path: string): string => {
     const result = path.split(".").reduce(
       (value: any, key) => (value ? value[key] : undefined),
       portfolioContent[language]
     );
     return typeof result === "string" ? result : "";
-  };
+  }, [language]);
 
-  const localize = (value: any): string => {
+  const localize = useCallback((value: any): string => {
     if (value && typeof value === "object" && !Array.isArray(value) && ("en" in value || "id" in value)) {
       return value[language] || value.en || "";
     }
     return typeof value === "string" ? value : "";
-  };
+  }, [language]);
+
+  const value = useMemo(
+    () => ({ language, setLanguage, theme, toggleTheme, t, localize, currentPage, navigate }),
+    [language, theme, currentPage, setLanguage, toggleTheme, t, localize, navigate]
+  );
 
   return (
-    <AppContext.Provider value={{ language, setLanguage, theme, toggleTheme, t, localize, currentPage, navigate }}>
+    <AppContext.Provider value={value}>
       {children}
     </AppContext.Provider>
   );
