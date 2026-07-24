@@ -2,8 +2,8 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.ttf") format("truetype");
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.ttf") format("truetype");
     font-weight: 200 700;
     font-style: normal;
     font-display: swap;
@@ -12,8 +12,8 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.ttf") format("truetype");
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -22,8 +22,8 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.ttf") format("truetype");
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -32,8 +32,8 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.ttf") format("truetype");
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -42,8 +42,8 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.ttf") format("truetype");
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -52,9 +52,9 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.ttf") format("truetype");
-    font-weight: 600;
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.ttf") format("truetype");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -62,8 +62,8 @@
 @font-face {
     font-family: "Clash Display";
     src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff2") format("woff2"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff"),
-         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.ttf") format("truetype");
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff"),
+        url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -172,7 +172,12 @@ body.modal-open {
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .hero-title,
 .giant,
 .section-title-block,
@@ -197,9 +202,9 @@ h1, h2, h3, h4, h5, h6,
 .work-teaser-title,
 .projects-page-h1 {
     font-family: var(--font-heading);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1;
 }
 
 a,
@@ -479,7 +484,7 @@ body[data-theme="light"] .moon-icon {
     letter-spacing: 0.2em;
     color: var(--muted);
     font-size: 0.72rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .section-label {
@@ -489,10 +494,10 @@ body[data-theme="light"] .moon-icon {
 
 .hero-title {
     margin: 0 0 1.4rem;
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-    line-height: 1.0;
-    letter-spacing: -0.04em;
-    font-weight: 700;
+    font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 .hero-intro {
@@ -788,7 +793,7 @@ body[data-theme="light"] .btn-cv {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text);
     font-size: 0.82rem;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -845,8 +850,8 @@ body[data-theme="light"] .hero-social-btn:focus-visible {
 .giant {
     margin: 0;
     font-size: clamp(6rem, 17vw, 15rem);
-    line-height: 0.82;
-    letter-spacing: -0.08em;
+    line-height: 0.9;
+    letter-spacing: -0.01em;
 }
 
 .outline {
@@ -1078,7 +1083,7 @@ body[data-theme="light"] .hero-social-btn:focus-visible {
     opacity: 0.35;
 }
 
-.identity-hero-card > * {
+.identity-hero-card>* {
     position: relative;
     z-index: 1;
 }
@@ -1087,8 +1092,9 @@ body[data-theme="light"] .hero-social-btn:focus-visible {
     margin: 0;
     max-width: 14ch;
     font-size: clamp(2.5rem, 5.4vw, 4.75rem);
-    line-height: 0.92;
-    letter-spacing: -0.06em;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 .identity-hero-card .lead {
@@ -1222,9 +1228,17 @@ body[data-theme="light"] .hero-social-btn:focus-visible {
     transform: scale(1.2) rotate(-5deg);
 }
 
-.logo-symbol-light { display: none; }
-body[data-theme="light"] .logo-symbol-dark { display: none; }
-body[data-theme="light"] .logo-symbol-light { display: block; }
+.logo-symbol-light {
+    display: none;
+}
+
+body[data-theme="light"] .logo-symbol-dark {
+    display: none;
+}
+
+body[data-theme="light"] .logo-symbol-light {
+    display: block;
+}
 
 .identity-mockup-window {
     display: grid;
@@ -1265,8 +1279,8 @@ body[data-theme="light"] .logo-symbol-light { display: block; }
 .identity-mockup-copy h3 {
     margin: 0;
     font-size: clamp(1.45rem, 2.8vw, 2rem);
-    line-height: 1;
-    letter-spacing: -0.05em;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
 }
 
 .identity-mockup-copy p {
@@ -1317,8 +1331,9 @@ body[data-theme="light"] .logo-symbol-light { display: block; }
     margin: 0;
     max-width: 16ch;
     font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 0.95;
-    letter-spacing: -0.06em;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 .identity-anatomy-grid {
@@ -1396,6 +1411,7 @@ body[data-theme="light"] .logo-symbol-light { display: block; }
 }
 
 @media (max-width: 1180px) {
+
     .identity-hero,
     .identity-secondary-row {
         grid-template-columns: 1fr;
@@ -1445,8 +1461,9 @@ body[data-theme="light"] .logo-symbol-light { display: block; }
 .skills-intro h2 {
     margin: 0;
     font-size: clamp(2.2rem, 5vw, 4.7rem);
-    line-height: 0.95;
-    letter-spacing: -0.06em;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 .lead {
@@ -1565,9 +1582,9 @@ body[data-theme="light"] .logo-symbol-light { display: block; }
     pointer-events: none;
 }
 
-.project-card > *,
-.skill-card > *,
-.timeline-item > * {
+.project-card>*,
+.skill-card>*,
+.timeline-item>* {
     position: relative;
     z-index: 1;
 }
@@ -1924,7 +1941,9 @@ body[data-theme="light"] .timeline-proof-button {
 
 .skills-layout .section-title-block h2 {
     font-size: clamp(1.9rem, 3.2vw, 3.35rem);
-    line-height: 0.96;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
     max-width: 9ch;
 }
 
@@ -1958,8 +1977,9 @@ body[data-theme="light"] .timeline-proof-button {
 .skills-logo-title {
     margin: 0;
     font-size: clamp(1.95rem, 4vw, 3.85rem);
-    line-height: 0.92;
-    letter-spacing: 0;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
     color: var(--text);
 }
 
@@ -1997,8 +2017,9 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
     margin: 0;
     max-width: 8ch;
     font-size: clamp(2.8rem, 5.7vw, 5.1rem);
-    line-height: 0.88;
-    letter-spacing: -0.08em;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 .education-layout .section-title-block p {
@@ -2074,8 +2095,8 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
 
 .education-card-period {
     font-size: clamp(2.5rem, 5vw, 4.8rem);
-    line-height: 0.86;
-    letter-spacing: -0.09em;
+    line-height: 1.0;
+    letter-spacing: 0em;
     max-width: 6ch;
 }
 
@@ -2583,7 +2604,7 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
         border-radius: 1rem;
         background: transparent;
         font-size: 1.1rem;
-        font-weight: 600;
+        font-weight: 500;
         color: var(--text);
         text-align: center;
         border: 1px solid transparent;
@@ -2971,7 +2992,7 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
     pointer-events: none;
 }
 
-.identity-shell > * {
+.identity-shell>* {
     position: relative;
     z-index: 1;
 }
@@ -3250,6 +3271,7 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
 }
 
 @media (max-width: 1180px) {
+
     .identity-hero,
     .identity-secondary-row {
         grid-template-columns: 1fr;
@@ -3628,8 +3650,9 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
     margin: 0;
     max-width: 12ch;
     font-size: 1.1rem;
-    line-height: 1.08;
-    letter-spacing: -0.04em;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 .identity-focus-card p {
@@ -3781,6 +3804,7 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
 }
 
 @keyframes identity-float {
+
     0%,
     100% {
         transform: translateY(0px);
@@ -3792,6 +3816,7 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
 }
 
 @media (max-width: 1180px) {
+
     .identity-overview,
     .identity-showcase-row,
     .identity-mockup-window,
@@ -4345,9 +4370,11 @@ body[data-theme="light"] .hero-cta-ghost {
     .hero-bg {
         display: none;
     }
+
     .hero-stage {
         display: flex;
     }
+
     .hero {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -4375,8 +4402,9 @@ body[data-theme="light"] .hero-cta-ghost {
 .about-content-col h2 {
     margin: 0;
     font-size: clamp(2.2rem, 5vw, 4.7rem);
-    line-height: 0.95;
-    letter-spacing: -0.06em;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
 }
 
 /* ─── Responsive ─── */
