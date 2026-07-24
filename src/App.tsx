@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { SignalStrip } from "./components/SignalStrip";
+import { StatsStrip } from "./components/StatsStrip";
 import { About } from "./components/About";
 import { Work } from "./components/Work";
 import { Journey } from "./components/Journey";
@@ -84,7 +84,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <SignalStrip />
+        <StatsStrip />
         <About />
         <Work onOpenProject={handleOpenProject} />
         <Journey onOpenJourney={handleOpenJourney} />
