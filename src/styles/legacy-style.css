@@ -1,5 +1,75 @@
 /* ─── Custom Fonts ─── */
 @font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.ttf") format("truetype");
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Extralight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff2") format("woff2"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff") format("woff"),
+         url("/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Nexa Heavy";
     src: url("/assets/fonts/nexa/Nexa-Heavy.ttf") format("truetype");
     font-weight: 700 900;
@@ -33,8 +103,8 @@
     --header-border: rgba(255, 255, 255, 0.1);
     --shadow: 0 28px 75px rgba(0, 0, 0, 0.34);
     --font: "DM Sans", "Space Grotesk", system-ui, sans-serif;
-    --font-heading: "Space Grotesk", "DM Sans", system-ui, sans-serif;
-    --font-display: "Space Grotesk", "DM Sans", system-ui, sans-serif;
+    --font-heading: "Clash Display", "Space Grotesk", "DM Sans", system-ui, sans-serif;
+    --font-display: "Clash Display", "Space Grotesk", "DM Sans", system-ui, sans-serif;
 }
 
 body[data-theme="light"] {
@@ -123,7 +193,9 @@ h1, h2, h3, h4, h5, h6,
 .contact-panel h2,
 .credentials-intro h2,
 .skills-intro h2,
-.footer-heading {
+.footer-heading,
+.work-teaser-title,
+.projects-page-h1 {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.03em;
