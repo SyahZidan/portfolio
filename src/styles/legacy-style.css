@@ -2529,7 +2529,9 @@ body[data-theme="light"] .skills-logo-loop .logoloop__item img {
 
 .modal-panel-project {
     max-height: 88vh;
-    overflow: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
 .modal-close {

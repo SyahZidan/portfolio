@@ -695,8 +695,44 @@ export const featuredProjects: Project[] = [
     image: "assets/projects/project-absensi-kantor.webp",
     link: "#",
     group: "original"
+  },
+  {
+    title: {
+      en: "Jelajah Nusantara",
+      id: "Jelajah Nusantara"
+    },
+    category: {
+      en: "Unity3D Game",
+      id: "Game Unity3D"
+    },
+    summary: {
+      en: "A 3D educational adventure game built in Unity that takes players on an exploration of Indonesia's cultural heritage buildings while completing interactive missions and learning historical facts.",
+      id: "Game petualangan edukatif 3D berbasis Unity yang mengajak pemain menjelajahi bangunan warisan budaya Indonesia sambil menyelesaikan misi interaktif dan mempelajari fakta sejarah."
+    },
+    description: {
+      en: "Jelajah Nusantara is a Unity3D educational game developed as the Final Semester Project (UAS) for Information Technology at ITB Ahmad Dahlan Jakarta. Players explore authentic cultural heritage sites across the archipelago, completing location-based missions and uncovering historical information embedded in each landmark.",
+      id: "Jelajah Nusantara adalah game edukatif Unity3D yang dikembangkan sebagai Ujian Akhir Semester Program Studi Teknologi Informasi, Fakultas Teknik dan Desain, ITB Ahmad Dahlan Jakarta. Pemain menjelajahi situs warisan budaya asli Nusantara, menyelesaikan misi berbasis lokasi, dan mengungkap informasi sejarah yang tersimpan di setiap landmark."
+    },
+    role: {
+      en: "Game design, Unity3D development, 3D environment building, and interactive mission scripting",
+      id: "Desain game, pengembangan Unity3D, pembangunan lingkungan 3D, dan scripting misi interaktif"
+    },
+    impact: {
+      en: "Demonstrates Unity3D development skills applied to educational game design, showcasing interactive storytelling with Indonesia's cultural identity at its core.",
+      id: "Menunjukkan kemampuan pengembangan Unity3D yang diterapkan pada desain game edukatif, memadukan storytelling interaktif dengan identitas budaya Indonesia."
+    },
+    stack: ["Unity3D", "C#", "3D Modeling", "Game Design"],
+    meta: {
+      en: "2026 / Unity Game",
+      id: "2026 / Unity Game"
+    },
+    image: "https://img.youtube.com/vi/9Vo8EB7NA2I/hqdefault.jpg",
+    embed: "https://www.youtube.com/embed/9Vo8EB7NA2I",
+    link: "https://youtu.be/9Vo8EB7NA2I?si=Muzr6ldxMQZhbjLn",
+    group: "unity"
   }
 ];
+
 
 export const journeyItems: JourneyItem[] = [
   {

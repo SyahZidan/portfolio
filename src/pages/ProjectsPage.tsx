@@ -5,14 +5,14 @@ import type { Project } from "../types/portfolio";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft, ChevronLeft, ChevronRight, ArrowUpRight,
-  Code2, Wifi, Video, Palette, Layers
+  Code2, Wifi, Video, Palette, Layers, Gamepad2
 } from "lucide-react";
 
 interface ProjectsPageProps {
   onOpenProject: (project: Project) => void;
 }
 
-type FilterGroup = "all" | "original" | "iot" | "video" | "redesign";
+type FilterGroup = "all" | "original" | "iot" | "video" | "redesign" | "unity";
 
 const filterLabels: Record<FilterGroup, { en: string; id: string }> = {
   all:      { en: "All",           id: "Semua" },
@@ -20,19 +20,21 @@ const filterLabels: Record<FilterGroup, { en: string; id: string }> = {
   iot:      { en: "IoT",           id: "IoT" },
   video:    { en: "Video & Film",  id: "Video & Film" },
   redesign: { en: "Redesign",      id: "Redesign" },
+  unity:    { en: "Unity Game",    id: "Unity Game" },
 };
-const filterOrder: FilterGroup[] = ["all", "original", "iot", "video", "redesign"];
+const filterOrder: FilterGroup[] = ["all", "original", "iot", "video", "redesign", "unity"];
 
 const CARDS_PER_PAGE = 9; // 3 columns × 3 rows
 
 const CategoryIcon: React.FC<{ group: Project["group"] }> = ({ group }) => {
   const size = 14;
   switch (group) {
-    case "iot":      return <Wifi    size={size} />;
-    case "video":    return <Video   size={size} />;
-    case "redesign": return <Palette size={size} />;
-    case "original": return <Layers  size={size} />;
-    default:         return <Code2   size={size} />;
+    case "iot":      return <Wifi      size={size} />;
+    case "video":    return <Video     size={size} />;
+    case "redesign": return <Palette   size={size} />;
+    case "original": return <Layers    size={size} />;
+    case "unity":    return <Gamepad2  size={size} />;
+    default:         return <Code2     size={size} />;
   }
 };
 

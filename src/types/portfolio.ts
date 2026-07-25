@@ -33,7 +33,7 @@ export interface Project {
   image: string;
   embed?: string;
   link: string;
-  group: "original" | "iot" | "video" | "redesign";
+  group: "original" | "iot" | "video" | "redesign" | "unity";
 }
 
 export interface JourneyProof {

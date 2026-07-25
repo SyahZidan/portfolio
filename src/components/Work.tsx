@@ -8,12 +8,12 @@ interface WorkProps {
   onOpenProject: (project: Project) => void;
 }
 
-// Pick 7 projects for the mosaic preview to showcase Zidan's latest work
+// Pick 8 projects for the mosaic preview to showcase Zidan's latest work
 const mosaicImages = [
   { image: "assets/projects/project-npc.webp", label: "Redesign NPC Global", isExternal: false },
   { image: "assets/projects/project-absensi-kantor.webp", label: "Absensi & Upah Geolocation", isExternal: false },
   { image: "https://img.youtube.com/vi/MkDjJuXVT8c/hqdefault.jpg", label: "Menjadi Sesuatu", isExternal: true },
-  { image: "assets/projects/project-podsi.webp", label: "Redesign PODSI", isExternal: false },
+  { image: "https://img.youtube.com/vi/9Vo8EB7NA2I/hqdefault.jpg", label: "Jelajah Nusantara", isExternal: true },
   { image: "assets/projects/project-iot-smart-home-thumb.webp", label: "IoT Smart Home", isExternal: false },
   { image: "assets/projects/astral_mart.webp", label: "Astral Marketplace", isExternal: false },
   { image: "assets/projects/astral_hub.webp", label: "AstralHub", isExternal: false },
