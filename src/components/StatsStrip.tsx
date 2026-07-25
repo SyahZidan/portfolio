@@ -1,5 +1,6 @@
 import React from "react";
 import { useApp } from "../context/AppContext";
+import { featuredProjects } from "../data/portfolioData";
 import { motion } from "framer-motion";
 import BorderGlow from "./ui/BorderGlow";
 import { getGlowTheme } from "../utils/glowTheme";
@@ -8,6 +9,8 @@ export const StatsStrip: React.FC = () => {
   const { language, theme } = useApp();
   const glow = getGlowTheme(theme);
 
+  const projectCount = `${String(featuredProjects.length).padStart(2, "0")}+`;
+
   const stats = [
     {
       value: "03+",
@@ -15,7 +18,7 @@ export const StatsStrip: React.FC = () => {
       highlight: true,
     },
     {
-      value: "15+",
+      value: projectCount,
       label: language === "id" ? "Proyek & Eksperimen" : "Projects & Experiments",
       highlight: false,
     },
