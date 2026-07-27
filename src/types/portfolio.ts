@@ -21,6 +21,16 @@ export interface SiteProfile {
   contact: ContactItem[];
 }
 
+export interface GalleryItem {
+  image: string;
+  caption?: MultilingualText;
+}
+
+export interface ProjectFeature {
+  title: MultilingualText;
+  description: MultilingualText;
+}
+
 export interface Project {
   title: MultilingualText;
   category: MultilingualText;
@@ -31,8 +41,10 @@ export interface Project {
   stack: string[];
   meta: MultilingualText;
   image: string;
+  gallery?: GalleryItem[];
+  features?: ProjectFeature[];
   embed?: string;
-  link: string;
+  link?: string;
   group: "original" | "iot" | "video" | "redesign" | "unity";
 }
 

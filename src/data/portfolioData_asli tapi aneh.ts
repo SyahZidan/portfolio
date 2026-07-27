@@ -412,7 +412,7 @@ export const featuredProjects: Project[] = [
       en: "Explores how a commerce experience can feel expressive without compromising usability.",
       id: "Menunjukkan bahwa pengalaman belanja online tetap bisa terasa ekspresif tanpa mengorbankan kenyamanan penggunaan."
     },
-    stack: ["UI Design", "Frontend", "Animation"],
+    stack: ["HTML", "CSS", "JavaScript"],
     meta: {
       en: "2023 / Interactive",
       id: "2023 / Interaktif"
@@ -625,7 +625,7 @@ export const featuredProjects: Project[] = [
       id: "2026 / Redesign"
     },
     image: "assets/projects/project-npc.webp",
-    link: "https://npc-global.id/",
+    link: "https://npc-company.netlify.app",
     group: "redesign"
   },
   {

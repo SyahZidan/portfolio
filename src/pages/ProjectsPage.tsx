@@ -5,7 +5,8 @@ import type { Project } from "../types/portfolio";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft, ChevronLeft, ChevronRight, ArrowUpRight,
-  Code2, Wifi, Video, Palette, Layers, Gamepad2
+  Code2, Wifi, Video, Palette, Layers, Gamepad2,
+  ArrowDownNarrowWide, ArrowUpNarrowWide
 } from "lucide-react";
 
 interface ProjectsPageProps {
@@ -38,19 +39,35 @@ const CategoryIcon: React.FC<{ group: Project["group"] }> = ({ group }) => {
   }
 };
 
-const extractYear = (meta: string) => meta.split("/")[0].trim();
+type SortOrder = "newest" | "oldest";
+
+const extractYear = (meta: string) => parseInt(meta.split("/")[0].trim(), 10) || 0;
 
 export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenProject }) => {
   const { localize, language, navigate } = useApp();
   const [activeFilter, setActiveFilter] = useState<FilterGroup>("all");
+  const [sortOrder, setSortOrder]       = useState<SortOrder>("newest");
   const [currentPage, setCurrentPage]   = useState(0);
 
   const filteredProjects = useMemo(() => {
-    if (activeFilter === "all") return featuredProjects;
-    return featuredProjects.filter((p) => p.group === activeFilter);
-  }, [activeFilter]);
+    const base = activeFilter === "all"
+      ? featuredProjects
+      : featuredProjects.filter((p) => p.group === activeFilter);
 
-  useEffect(() => { setCurrentPage(0); }, [activeFilter]);
+    // Sort by year extracted from meta, preserve original index as tiebreaker
+    return [...base].sort((a, b) => {
+      const yearA = extractYear(localize(a.meta));
+      const yearB = extractYear(localize(b.meta));
+      const diff  = sortOrder === "newest" ? yearB - yearA : yearA - yearB;
+      if (diff !== 0) return diff;
+      // Same year → keep original array order
+      return sortOrder === "newest"
+        ? featuredProjects.indexOf(b) - featuredProjects.indexOf(a)
+        : featuredProjects.indexOf(a) - featuredProjects.indexOf(b);
+    });
+  }, [activeFilter, sortOrder, localize]);
+
+  useEffect(() => { setCurrentPage(0); }, [activeFilter, sortOrder]);
 
   const totalPages  = Math.ceil(filteredProjects.length / CARDS_PER_PAGE);
   const pageProjects = useMemo(() => {
@@ -132,38 +149,60 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenProject }) => 
       {/* ── Grid Area ── */}
       <div className="projects-grid-area">
 
-        {/* Top bar: count label + nav arrows (top-right) */}
+        {/* Top bar: count label + sort toggle + nav arrows */}
         <div className="projects-grid-topbar">
           <span className="projects-grid-count-label">
             {filteredProjects.length}&nbsp;
             {language === "id" ? "proyek" : "projects"}
           </span>
 
-          {totalPages > 1 && (
-            <div className="projects-grid-nav">
+          <div className="projects-topbar-right">
+            {/* Sort toggle */}
+            <div className="sort-toggle" role="group" aria-label="Sort order">
               <button
-                className="projects-nav-arrow"
-                onClick={handlePrev}
-                disabled={currentPage === 0}
-                aria-label="Previous page"
+                className={`sort-toggle-btn${sortOrder === "newest" ? " is-active" : ""}`}
+                onClick={() => setSortOrder("newest")}
+                title={language === "id" ? "Terbaru Dulu" : "Newest First"}
               >
-                <ChevronLeft size={18} />
+                <ArrowDownNarrowWide size={14} />
+                <span>{language === "id" ? "Terbaru" : "Newest"}</span>
               </button>
-              <span className="projects-nav-counter">
-                <strong>{currentPage + 1}</strong>
-                <span className="sep">/</span>
-                {totalPages}
-              </span>
               <button
-                className="projects-nav-arrow"
-                onClick={handleNext}
-                disabled={currentPage >= totalPages - 1}
-                aria-label="Next page"
+                className={`sort-toggle-btn${sortOrder === "oldest" ? " is-active" : ""}`}
+                onClick={() => setSortOrder("oldest")}
+                title={language === "id" ? "Terlama Dulu" : "Oldest First"}
               >
-                <ChevronRight size={18} />
+                <ArrowUpNarrowWide size={14} />
+                <span>{language === "id" ? "Terlama" : "Oldest"}</span>
               </button>
             </div>
-          )}
+
+            {totalPages > 1 && (
+              <div className="projects-grid-nav">
+                <button
+                  className="projects-nav-arrow"
+                  onClick={handlePrev}
+                  disabled={currentPage === 0}
+                  aria-label="Previous page"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <span className="projects-nav-counter">
+                  <strong>{currentPage + 1}</strong>
+                  <span className="sep">/</span>
+                  {totalPages}
+                </span>
+                <button
+                  className="projects-nav-arrow"
+                  onClick={handleNext}
+                  disabled={currentPage >= totalPages - 1}
+                  aria-label="Next page"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* 3×3 Grid */}
@@ -197,13 +236,15 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenProject }) => 
                 >
                   {/* Image */}
                   <div className="pj-card-media">
-                    <img
-                      src={project.image.startsWith("http") ? project.image : `/${project.image}`}
-                      alt={localize(project.title)}
-                      className="pj-card-img"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <div className="pj-card-img-wrap">
+                      <img
+                        src={project.image.startsWith("http") ? project.image : `/${project.image}`}
+                        alt={localize(project.title)}
+                        className="pj-card-img"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
                     {/* Year badge – top left */}
                     <span className="pj-card-year">{year}</span>
                     {/* Expand icon – top right */}

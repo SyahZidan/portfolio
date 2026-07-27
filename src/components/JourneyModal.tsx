@@ -36,9 +36,9 @@ export const JourneyModal: React.FC<JourneyModalProps> = ({ isOpen, onClose, ite
   if (!isOpen || !item || !item.proof) return null;
 
   return (
-    <div className="modal is-open" id="journey-modal" aria-hidden="false">
+    <div className="modal is-open" id="journey-modal" aria-hidden="false" data-lenis-prevent>
       <div className="modal-backdrop" onClick={onClose}></div>
-      <div className="modal-panel modal-panel-journey" role="dialog" aria-modal="true" aria-labelledby="journey-modal-title">
+      <div className="modal-panel modal-panel-journey" role="dialog" aria-modal="true" aria-labelledby="journey-modal-title" data-lenis-prevent>
         <button className="modal-close" onClick={onClose} aria-label={t("ui.closeJourneyProof")}>
           <X size={20} />
         </button>

@@ -412,7 +412,7 @@ export const featuredProjects: Project[] = [
       en: "A test of how far a shopping interface can look different without getting harder to use.",
       id: "Percobaan seberapa jauh tampilan toko online bisa dibuat beda tanpa bikin ribet dipakai."
     },
-    stack: ["UI Design", "Frontend", "Animation"],
+    stack: ["HTML", "CSS", "JavaScript"],
     meta: {
       en: "2023 / Interactive",
       id: "2023 / Interaktif"
@@ -625,7 +625,7 @@ export const featuredProjects: Project[] = [
       id: "2026 / Redesign"
     },
     image: "assets/projects/project-npc.webp",
-    link: "https://npc-global.id/",
+    link: "https://npc-company.netlify.app",
     group: "redesign"
   },
   {
@@ -659,42 +659,155 @@ export const featuredProjects: Project[] = [
       id: "2026 / Redesign"
     },
     image: "assets/projects/project-podsi.webp",
-    link: "https://podsi.or.id/",
+    link: "https://podsi-id.netlify.app/",
     group: "redesign"
   },
   {
     title: {
-      en: "Geolocation & Selfie Attendance System",
-      id: "Sistem Absensi Geolocation & Selfie"
+      en: "Geolocation & Selfie Attendance System (Absensi Hub)",
+      id: "Sistem Absensi Geolocation & Selfie (Absensi Hub)"
     },
     category: {
-      en: "Original Project / Fullstack",
-      id: "Proyek Original / Fullstack"
+      en: "R&D Fullstack Web App / SME Attendance & Payroll",
+      id: "Web App Fullstack R&D / Absensi & Payroll UMKM"
     },
     summary: {
-      en: "An internal office system combining live selfie capture, GPS coordinates verification, and automated monthly payroll calculation.",
-      id: "Sistem kantor internal yang menggabungkan verifikasi foto selfie langsung, koordinat GPS, dan perhitungan upah bulanan otomatis."
+      en: "A web-based employee attendance & automated payroll system developed for SME Gudang Cipta Karya, combining Haversine geofencing, real-time selfie verification, and multi-shift wage calculation.",
+      id: "Sistem informasi absensi dan penggajian otomatis berbasis web pada UMKM Gudang Cipta Karya, mengintegrasikan geofencing Haversine, verifikasi foto selfie real-time, dan kalkulasi upah multi-shift."
     },
     description: {
-      en: "A secure web application designed to track employee attendance using location tracking and facial verification, integrating directly with an automated payroll engine.",
-      id: "Aplikasi web aman yang dirancang untuk melacak kehadiran karyawan menggunakan pelacakan lokasi dan verifikasi wajah, terintegrasi langsung dengan mesin perhitungan gaji otomatis."
+      en: "Developed using the Research & Development (R&D) framework and zero-dependency PHP 8.x Native + MySQL architecture. Designed with a mobile-first UI shell tailored for informal daily workers without downloading native apps. Key modules include configurable-radius Geofencing using Haversine spherical distance calculation, real-time selfie camera capture via HTML5 MediaDevices & Canvas API, automated dual-shift wage calculation (morning/afternoon shift, late penalties, hourly overtime, flat night rate), digital leave & permit approval, executive admin dashboard, Excel report generation, and printable payslips. Rigorously evaluated with 100% Black Box functional test success and a System Usability Scale (SUS) score of 92.19/100 (Excellent category) across 16 active users.",
+      id: "Dikembangkan menggunakan metode Research & Development (R&D) 9 tahap dan arsitektur PHP 8.x Native + MySQL tanpa kerangka kerja berat. Antarmuka dirancang mobile-first menyerupai aplikasi seluler untuk kemudahan operasional karyawan harian tanpa perlu unduh aplikasi. Fitur utama mencakup Geofencing radius terkonfigurasi (algoritma Haversine), verifikasi foto selfie real-time via HTML5 MediaDevices & Canvas API, kalkulasi upah otomatis 2 shift (shift pagi/siang, denda keterlambatan, lembur per jam, tarif flat malam), manajemen persetujuan izin/cuti digital, dashboard monitoring admin, ekspor laporan Excel (.xls), dan cetak slip gaji (Window Print API). Teruji 100% pada 13 skenario Black Box Testing serta meraih skor System Usability Scale (SUS) 92,19/100 (kategori Excellent) terhadap 16 responden."
     },
     role: {
-      en: "Fullstack development, Geolocation API integration, and payroll logic calculation",
-      id: "Pengembangan fullstack, integrasi API Geolocation, dan logika kalkulasi sistem upah"
+      en: "Lead R&D Developer: Fullstack PHP Native & MySQL, Haversine Geofencing Engine, MediaDevices Camera Verification, Automated Payroll Logic, & SUS Evaluation",
+      id: "Pengembang Utama (R&D): Fullstack PHP Native & MySQL, Engine Geofencing Haversine, Verifikasi Kamera MediaDevices, Logika Penggajian Otomatis, & Evaluasi SUS"
     },
     impact: {
-      en: "Prevents fake attendance logs and automates HR finance calculations, saving hours of manual Excel processing.",
-      id: "Mencegah manipulasi absen dan mengotomatiskan kalkulasi keuangan HR, menghemat waktu pemrosesan manual Excel."
+      en: "Eliminated attendance fraud & manual record manipulation for 16 users, automated complex multi-shift payroll processing, and achieved an Excellent usability score of 92.19/100 SUS.",
+      id: "Menghilangkan kecurangan presensi & manipulasi data manual untuk 16 pengguna, mengotomatisasi kalkulasi upah multi-shift yang rumit, serta meraih skor SUS 92,19/100 (Kategori Excellent)."
     },
-    stack: ["React", "Node.js", "Geolocation API", "Database"],
+    stack: ["PHP 8.x Native", "MySQL", "Haversine Algorithm", "Geolocation API", "MediaDevices & Canvas API", "Tailwind CSS", "Alpine.js", "Chart.js"],
     meta: {
-      en: "2026 / Original",
-      id: "2026 / Original"
+      en: "2026 / R&D Fullstack",
+      id: "2026 / R&D Fullstack"
     },
-    image: "assets/projects/project-absensi-kantor.webp",
-    link: "#",
-    group: "original"
+    image: "assets/projects/project-absensi-kantor/project-absensi-kantor.webp",
+    link: "",
+    group: "original",
+    gallery: [
+      {
+        image: "assets/projects/project-absensi-kantor/project-absensi-kantor.webp",
+        caption: {
+          en: "System Overview & Feature Highlights (Selfie Verification, Geofencing & Automated Payroll)",
+          id: "Ringkasan Fitur Utama Sistem (Verifikasi Wajah, Geolocation, & Upah Otomatis)"
+        }
+      },
+      {
+        image: "assets/projects/project-absensi-kantor/1.webp",
+        caption: {
+          en: "Mobile-First Attendance Interface with Real-Time Camera Selfie Verification",
+          id: "Tampilan Presensi Mobile-First & Verifikasi Kamera Selfie Real-Time"
+        }
+      },
+      {
+        image: "assets/projects/project-absensi-kantor/2.webp",
+        caption: {
+          en: "Haversine Geofencing Validation (Safe 2m Radius Approval vs 3.7km Out-of-Bound Rejection)",
+          id: "Validasi Geolokasi Haversine (Radius Aman 2m vs Penolakan Lokasi 3,7 km)"
+        }
+      },
+      {
+        image: "assets/projects/project-absensi-kantor/3.webp",
+        caption: {
+          en: "Admin Executive Dashboard with Attendance Charts & Operations Summary",
+          id: "Dashboard Eksekutif Admin dengan Analitik Grafik & Ringkasan Operasional"
+        }
+      },
+      {
+        image: "assets/projects/project-absensi-kantor/4.webp",
+        caption: {
+          en: "Real-Time Employee Attendance Monitoring & Detailed Verification Log",
+          id: "Monitoring Kehadiran Real-Time & Log Verifikasi Detail Karyawan"
+        }
+      },
+      {
+        image: "assets/projects/project-absensi-kantor/5.webp",
+        caption: {
+          en: "Automated Dual-Shift Payroll Recap, Overtime & Penalty Breakdown",
+          id: "Rekapitulasi Upah Otomatis Dual-Shift, Lembur & Rincian Denda Keterlambatan"
+        }
+      },
+      {
+        image: "assets/projects/project-absensi-kantor/6.webp",
+        caption: {
+          en: "Geofence Radius Configuration & Work Shift Parameters Setup",
+          id: "Konfigurasi Radius Geofence & Pengaturan Parameter Shift Kerja"
+        }
+      }
+    ],
+    features: [
+      {
+        title: {
+          en: "Haversine Geofencing Algorithm",
+          id: "Algoritma Geofencing Haversine"
+        },
+        description: {
+          en: "Calculates precise spherical GPS distance between employee position and workplace coordinates with configurable radius, blocking out-of-bounds check-in attempts.",
+          id: "Menghitung jarak presisi GPS antara posisi karyawan dan lokasi kantor dengan radius terkonfigurasi, menolak presensi di luar area."
+        }
+      },
+      {
+        title: {
+          en: "Real-Time Selfie Camera Verification",
+          id: "Verifikasi Foto Selfie Real-Time"
+        },
+        description: {
+          en: "Integrates HTML5 MediaDevices & Canvas API to capture live timestamped identity photos during check-in and check-out to eliminate buddy punching.",
+          id: "Mengintegrasikan MediaDevices & Canvas API untuk menangkap foto identitas bertanda waktu saat absen masuk dan pulang guna menekan kecurangan."
+        }
+      },
+      {
+        title: {
+          en: "Automated Multi-Shift Payroll Engine",
+          id: "Engine Penggajian Multi-Shift Otomatis"
+        },
+        description: {
+          en: "Computes daily wages for Morning & Afternoon shifts, hourly overtime, night flat rates, late penalties, and leave deductions automatically.",
+          id: "Menghitung upah harian Shift Pagi & Siang, lembur per jam, tarif flat malam, denda keterlambatan, serta potongan izin secara otomatis."
+        }
+      },
+      {
+        title: {
+          en: "Digital Leave Request & Approval Workflow",
+          id: "Manajemen Izin & Approval Digital"
+        },
+        description: {
+          en: "Enables digital permit submissions by employees with instant notification and admin approval tracking.",
+          id: "Memfasilitasi pengajuan izin karyawan secara digital dengan alur notifikasi dan persetujuan (approval) admin secara instan."
+        }
+      },
+      {
+        title: {
+          en: "Excel Export & Printable Payslips",
+          id: "Ekspor Excel & Cetak Slip Gaji"
+        },
+        description: {
+          en: "Exports attendance and wage summaries to Excel (.xls) and generates print-ready payslips via Window Print API.",
+          id: "Mengekspor laporan kehadiran & rekap upah ke Excel (.xls) serta mencetak slip gaji karyawan via Window Print API."
+        }
+      },
+      {
+        title: {
+          en: "100% Black Box Pass & SUS 92.19 (Excellent)",
+          id: "Lolos 100% Black Box & SUS 92,19 (Excellent)"
+        },
+        description: {
+          en: "R&D evaluation passed 13/13 Black Box test scenarios and scored 92.19 on System Usability Scale (SUS) across 16 SME users.",
+          id: "Pengujian R&D lolos 100% pada 13 skenario Black Box dan meraih skor SUS 92,19 dari 16 pengguna (kategori Excellent)."
+        }
+      }
+    ]
   },
   {
     title: {

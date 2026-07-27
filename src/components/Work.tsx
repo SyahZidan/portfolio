@@ -11,7 +11,7 @@ interface WorkProps {
 // Pick 8 projects for the mosaic preview to showcase Zidan's latest work
 const mosaicImages = [
   { image: "assets/projects/project-npc.webp", label: "Redesign NPC Global", isExternal: false },
-  { image: "assets/projects/project-absensi-kantor.webp", label: "Absensi & Upah Geolocation", isExternal: false },
+  { image: "assets/projects/project-absensi-kantor/project-absensi-kantor.webp", label: "Absensi & Upah Geolocation", isExternal: false },
   { image: "https://img.youtube.com/vi/MkDjJuXVT8c/hqdefault.jpg", label: "Menjadi Sesuatu", isExternal: true },
   { image: "https://img.youtube.com/vi/9Vo8EB7NA2I/hqdefault.jpg", label: "Jelajah Nusantara", isExternal: true },
   { image: "assets/projects/project-iot-smart-home-thumb.webp", label: "IoT Smart Home", isExternal: false },
