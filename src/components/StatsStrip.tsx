@@ -9,7 +9,7 @@ export const StatsStrip: React.FC = () => {
   const { language, theme } = useApp();
   const glow = getGlowTheme(theme);
 
-  const projectCount = `${String(featuredProjects.length).padStart(2, "0")}+`;
+  const projectCount = `${String(featuredProjects.length).padStart(2, "0")}`;
 
   const stats = [
     {

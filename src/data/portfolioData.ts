@@ -843,6 +843,139 @@ export const featuredProjects: Project[] = [
     embed: "https://www.youtube.com/embed/9Vo8EB7NA2I",
     link: "https://youtu.be/9Vo8EB7NA2I?si=Muzr6ldxMQZhbjLn",
     group: "unity"
+  },
+  {
+    title: {
+      en: "AstralsOPR – Web-Based Operational Admin System (KKL ITB Ahmad Dahlan)",
+      id: "AstralsOPR – Sistem Administrasi Operasional Berbasis Web (KKL ITB Ahmad Dahlan)"
+    },
+    category: {
+      en: "Fullstack Web App / KKL Project",
+      id: "Web App Fullstack / Proyek KKL"
+    },
+    summary: {
+      en: "A web-based operational administration system developed during KKL at PT Esta Dana Ventura, streamlining debtor data management, document printing, and audit trail in one integrated platform — using PIECES methodology and AI-assisted development.",
+      id: "Sistem administrasi operasional berbasis web yang dikembangkan selama KKL di PT Esta Dana Ventura, mengintegrasikan pengelolaan data debitur, cetak dokumen, dan audit trail dalam satu platform — menggunakan metode PIECES dan pengembangan berbantuan AI."
+    },
+    description: {
+      en: "AstralsOPR is a web application developed as the final output of the Field Study Course (KKL) at ITB Ahmad Dahlan Jakarta, placed at PT Esta Dana Ventura's Admin Operational division. The system replaces the previous manual workflow — scattered debtor data, uncontrolled document printing, and the absence of a unified digital platform — with a structured, web-based solution. Built using PHP 8.2 Native, MySQL, Tailwind CSS, and Alpine.js, AstralsOPR features debtor data management, automatic document status tracking, drag-and-drop document uploads with SHA-1 duplicate detection, single & bulk print preview with print log (to prevent double printing), in-browser PDF Tools (merge, split, compress), RBAC user management, activity log as audit trail, and Excel export for reporting. The system was designed and evaluated using the PIECES analysis framework (Performance, Information, Economics, Control, Efficiency, Service).",
+      id: "AstralsOPR adalah aplikasi web yang dikembangkan sebagai luaran utama Kuliah Kerja Lapangan (KKL) di ITB Ahmad Dahlan Jakarta, yang ditempatkan di divisi Admin Operasional PT Esta Dana Ventura. Sistem ini menggantikan alur kerja manual sebelumnya — data debitur tersebar, cetak dokumen tidak terkontrol, dan tidak adanya platform digital terpadu — dengan solusi berbasis web yang terstruktur. Dibangun menggunakan PHP 8.2 Native, MySQL, Tailwind CSS, dan Alpine.js, AstralsOPR mencakup manajemen data debitur, pelacakan status dokumen otomatis, unggah dokumen drag-and-drop dengan deteksi duplikasi SHA-1, preview & cetak single maupun bulk dengan print log (pencegah double printing), PDF Tools langsung di browser (merge, split, compress), manajemen pengguna RBAC, activity log sebagai audit trail, dan ekspor Excel untuk pelaporan. Sistem dirancang dan dievaluasi menggunakan kerangka analisis PIECES (Performance, Information, Economics, Control, Efficiency, Service)."
+    },
+    role: {
+      en: "System architect & lead developer: system design, database schema, business logic, UI/UX, PIECES analysis, AI-assisted development coordination, and system testing",
+      id: "Arsitek sistem & pengembang utama: desain sistem, skema database, logika bisnis, UI/UX, analisis PIECES, koordinasi pengembangan berbantuan AI, dan pengujian sistem"
+    },
+    impact: {
+      en: "Replaced manual, error-prone administration with an integrated web system — eliminating double printing risk via print logs, centralizing debtor & document data, and enabling efficient bulk operations for the Admin Operational division of PT Esta Dana Ventura.",
+      id: "Menggantikan administrasi manual yang rentan error dengan sistem web terpadu — menghilangkan risiko double printing melalui print log, memusatkan data debitur & dokumen, dan mengaktifkan operasional bulk yang efisien untuk divisi Admin Operasional PT Esta Dana Ventura."
+    },
+    stack: ["PHP 8.2 Native", "MySQL", "Tailwind CSS", "Alpine.js", "pdf-lib", "pdf.js", "PIECES Methodology"],
+    meta: {
+      en: "2026 / KKL Fullstack",
+      id: "2026 / KKL Fullstack"
+    },
+    image: "assets/projects/proyek-hasil-kkl/Dashboard.webp",
+    link: "http://astralsopr.free.nf/",
+    group: "original",
+    gallery: [
+      {
+        image: "assets/projects/proyek-hasil-kkl/Dashboard.webp",
+        caption: {
+          en: "Main Dashboard – Summary of total debtor count, empty documents, print queue, latest uploads, and recent activity",
+          id: "Dashboard Utama – Ringkasan total debitur, dokumen kosong, antrean cetak, unggahan terbaru, dan aktivitas sistem"
+        }
+      },
+      {
+        image: "assets/projects/proyek-hasil-kkl/debitur.webp",
+        caption: {
+          en: "Debtor List Page – Data table with filter, search, automatic document status (Empty / Ready / In Progress / Done), and progress indicators",
+          id: "Halaman Daftar Debitur – Tabel data dengan filter, pencarian, status dokumen otomatis (Kosong / Siap / Proses / Selesai), dan indikator progres"
+        }
+      },
+      {
+        image: "assets/projects/proyek-hasil-kkl/Detail debitur.webp",
+        caption: {
+          en: "Debtor Detail Page – Document upload with drag-and-drop, SHA-1 duplicate detection, internal notes, and complete activity log per debtor",
+          id: "Halaman Detail Debitur – Unggah dokumen drag-and-drop, deteksi duplikasi SHA-1, catatan internal, dan activity log lengkap per debitur"
+        }
+      },
+      {
+        image: "assets/projects/proyek-hasil-kkl/Pdf tools.webp",
+        caption: {
+          en: "PDF Tools – In-browser merge, split, and compress PDF features without server upload, built with pdf-lib and pdf.js",
+          id: "PDF Tools – Fitur merge, split, dan compress PDF langsung di browser tanpa unggah ke server, dibangun dengan pdf-lib dan pdf.js"
+        }
+      },
+      {
+        image: "assets/projects/proyek-hasil-kkl/User.webp",
+        caption: {
+          en: "User Management – Role-Based Access Control (RBAC) with Admin, Staff, and Guest roles; add, edit, and delete user accounts",
+          id: "Manajemen Pengguna – Role-Based Access Control (RBAC) dengan role Admin, Staff, dan Guest; tambah, edit, dan hapus akun pengguna"
+        }
+      }
+    ],
+    features: [
+      {
+        title: {
+          en: "Automatic Document Status Engine",
+          id: "Engine Status Dokumen Otomatis"
+        },
+        description: {
+          en: "Calculates document status (Empty, Ready, In Progress, Done) automatically from database data, eliminating the need for manual one-by-one checking by staff.",
+          id: "Menghitung status dokumen (Kosong, Siap, Proses, Selesai) secara otomatis dari data database, menghilangkan kebutuhan pengecekan manual satu per satu oleh staf."
+        }
+      },
+      {
+        title: {
+          en: "Print Log & Double Printing Prevention",
+          id: "Print Log & Pencegah Double Printing"
+        },
+        description: {
+          en: "Records every print event in a dedicated log table, preventing staff from accidentally printing the same document multiple times and reducing paper waste.",
+          id: "Mencatat setiap aktivitas cetak ke tabel log tersendiri, mencegah staf mencetak dokumen yang sama lebih dari sekali dan mengurangi pemborosan kertas."
+        }
+      },
+      {
+        title: {
+          en: "SHA-1 Duplicate Document Detection",
+          id: "Deteksi Duplikasi Dokumen SHA-1"
+        },
+        description: {
+          en: "Generates a SHA-1 hash fingerprint for every uploaded file to detect and block duplicate document uploads before they reach the database.",
+          id: "Menghasilkan sidik jari hash SHA-1 untuk setiap file yang diunggah guna mendeteksi dan memblokir unggahan dokumen duplikat sebelum masuk ke database."
+        }
+      },
+      {
+        title: {
+          en: "In-Browser PDF Tools (Merge, Split, Compress)",
+          id: "PDF Tools di Browser (Merge, Split, Compress)"
+        },
+        description: {
+          en: "Provides merge, split, and compress PDF operations directly in the browser using pdf-lib and pdf.js, with no file upload to the server required.",
+          id: "Menyediakan operasi merge, split, dan compress PDF langsung di browser menggunakan pdf-lib dan pdf.js, tanpa perlu mengunggah file ke server."
+        }
+      },
+      {
+        title: {
+          en: "Role-Based Access Control (RBAC) & Activity Log",
+          id: "Kontrol Akses Berbasis Peran (RBAC) & Activity Log"
+        },
+        description: {
+          en: "Enforces three access levels (Admin, Staff, Guest) and records every important system action as a complete audit trail traceable at any time.",
+          id: "Menerapkan tiga level akses (Admin, Staff, Guest) dan mencatat setiap aksi penting sistem sebagai audit trail lengkap yang dapat ditelusuri kapan saja."
+        }
+      },
+      {
+        title: {
+          en: "PIECES Methodology & AI-Assisted Development",
+          id: "Metode PIECES & Pengembangan Berbantuan AI"
+        },
+        description: {
+          en: "System requirements were identified using the PIECES analysis framework across 6 dimensions. Development was accelerated with AI tools (Antigravity, Codex, Cursor) under direct system-architect oversight.",
+          id: "Kebutuhan sistem diidentifikasi menggunakan kerangka analisis PIECES pada 6 dimensi. Pengembangan dipercepat dengan tools AI (Antigravity, Codex, Cursor) di bawah pengawasan langsung sebagai arsitek sistem."
+        }
+      }
+    ]
   }
 ];
 
