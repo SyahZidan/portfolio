@@ -4,6 +4,7 @@ import { ArrowUpRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { Particles } from "./ui/Particles";
 import BlurText from "./ui/BlurText";
+import { siteProfile } from "../data/portfolioData";
 
 const GithubIcon = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -119,7 +120,14 @@ export const Hero: React.FC = () => {
             </span>
           </a>
 
-          <a href="#" className="hero-cta hero-cta-doc" id="cv-link">
+          <a
+            href={siteProfile.cvLink}
+            className="hero-cta hero-cta-doc"
+            id="cv-link"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="hero-cta-badge">PDF</span>
             <span className="hero-cta-copy">
               <span className="hero-cta-label">{t("hero.cvCta")}</span>

@@ -320,7 +320,7 @@ export const portfolioContent: { en: StaticCopy; id: StaticCopy } = {
 };
 
 export const siteProfile: SiteProfile = {
-  cvLink: "#",
+  cvLink: "/assets/documents/cv-zidan-2026.pdf",
   strengths: [
     { en: "AI-assisted workflow", id: "Workflow berbantu AI" },
     { en: "HTML & CSS familiarity", id: "Familiar dengan HTML & CSS" },
